@@ -1,0 +1,202 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.board-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 400px;
+}
+
+.controls-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+#game-board {
+    display: grid;
+    grid-gap: 0;
+    margin: 0 auto;
+}
+
+.board-cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+.board-cell:hover {
+    background-color: #f0f0f0;
+}
+
+.board-cell.hint {
+    background-color: #ffd700 !important;
+    color: black !important;
+}
+
+.board-cell.selected {
+    background-color: #90caf9 !important;
+    color: white !important;
+}
+
+.word-list {
+    margin-top: 20px;
+}
+
+.word-item {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.word-item.found {
+    background-color: #c8e6c9;
+    text-decoration: line-through;
+}
+
+.clue-item {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #e3f2fd;
+}
+
+.clue-item.found {
+    background-color: #c8e6c9;
+    text-decoration: line-through;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+#delete-word {
+    background-color: #f44336;
+}
+
+#delete-word:hover {
+    background-color: #d32f2f;
+}
+
+input, select {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#not-found-words-list {
+    display: none;
+}
+
+.stats {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+}
+
+#algorithm-stats {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.timer {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.found-words, .not-found-words {
+    margin-top: 20px;
+}
+
+#found-words-list, #not-found-words-list, #clues-list {
+    list-style: none;
+    padding: 0;
+}
+
+#found-words-list li, #not-found-words-list li, #clues-list li {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#found-words-list li:hover, #not-found-words-list li:hover {
+    background-color: #e0e0e0;
+}
+
+#clues-list li:hover {
+    background-color: #bbdefb;
+}
+
+.not-found-words li {
+    background-color: #f0f0f0;
+}
+
+.color-indicator {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border: 1px solid #000;
+    display: inline-block;
+}
